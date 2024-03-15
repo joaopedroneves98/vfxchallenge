@@ -7,15 +7,18 @@ docker-compose up
 ``
 in the root folder of the project to create an instance of the SQL Server database and populate it with some data.
 
-Run the application using one of the defined configurations like 'http'.
+Run the application using the defined configuration 'http'.
 
-Use Swagger, Postman or the HTTP file provided in the root folder to test the API.
+Use Swagger, Postman or the HTTP file provided [here](https://github.com/joaopedroneves98/vfxchallenge/blob/master/VFXChallenge.Api/VFXChallenge.Api.http).
 
 ## Limitations and Improvements
 * Use internal codes to better describe exceptions and return appropriate messages
 * Implement the message producer using KafkaFlow
 * Create a wrapper for the AlphaVantage client to be able to mock it in testing
 * Create Integration Tests
+* Remove the API key exposure
+* Validation testing
+* Use separate entities for EntityFramework instead of Domain Classes to remove public setters used in the PUT flow.
 
 ## Third Party libraries used
 
