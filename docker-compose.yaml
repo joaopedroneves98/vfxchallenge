@@ -1,0 +1,18 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "Password123!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+        
+  mssqltools:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      - sqlserver
+    volumes:
+      - ./SQLScripts/1-CreateDatabaseScript.sql:/tmp/1-CreateDatabaseScript.sql
+      - ./SQLScripts/init-database.sh:/tmp/init-database.sh
+    command: /bin/bash ./tmp/init-database.sh

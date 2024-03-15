@@ -1,0 +1,67 @@
+@url = http://localhost:5059
+@contentType = application/json
+
+################################################
+### Request: POST /api/v1/ForeignExchangeRates
+################################################
+
+
+POST {{url}}/api/v1/ForeignExchangeRates
+Content-Type: {{contentType}}
+
+{
+  "fromCurrencyCode": "EUR",
+  "toCurrencyCode": "USD",
+  "fromCurrencyName": "Euro",
+  "toCurrencyName": "United States Dollar",
+  "bid": 5.0,
+  "ask": 4.1
+}
+
+###############################################
+### Request: GET /api/v1/ForeignExchangeRates
+###############################################
+
+### Query Parameter: fromCurrency
+@fromCurrency = USD
+
+### Query Parameter: toCurrency
+@toCurrency = EUR
+
+
+GET {{url}}/api/v1/ForeignExchangeRates?fromCurrency={{fromCurrency}}&toCurrency={{toCurrency}}
+Content-Type: {{contentType}}
+
+
+####################################################
+### Request: PUT /api/v1/ForeignExchangeRates/{id}
+####################################################
+
+### Path Parameter: id
+@putId = 7538f361-fc06-4d09-bbdf-75ff5e14a2e2
+
+
+PUT {{url}}/api/v1/ForeignExchangeRates/{{putId}}
+Content-Type: {{contentType}}
+
+{
+  "fromCurrencyCode": "USD",
+  "toCurrencyCode": "EUR",
+  "fromCurrencyName": "United States Dollar",
+  "toCurrencyName": "Euro",
+  "bid": 7.45,
+  "ask": 4.15
+}
+
+#######################################################
+### Request: DELETE /api/v1/ForeignExchangeRates/{id}
+#######################################################
+
+### Path Parameter: id
+@deleteId = a693e148-1071-4b7f-b9ef-0f1595f0a8b0
+
+
+DELETE {{url}}/api/v1/ForeignExchangeRates/{{deleteId}}
+Content-Type: {{contentType}}
+
+
