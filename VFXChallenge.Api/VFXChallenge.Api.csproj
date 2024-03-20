@@ -8,6 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="KafkaFlow" Version="2.2.16" />
+        <PackageReference Include="KafkaFlow.LogHandler.Console" Version="2.2.16" />
+        <PackageReference Include="KafkaFlow.Microsoft.DependencyInjection" Version="2.2.16" />
+        <PackageReference Include="KafkaFlow.Serializer" Version="2.2.16" />
+        <PackageReference Include="KafkaFlow.Serializer.JsonCore" Version="2.2.16" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
