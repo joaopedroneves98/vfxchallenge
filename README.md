@@ -13,7 +13,7 @@ Use Swagger, Postman or the HTTP file provided [here](https://github.com/joaoped
 
 ## Limitations and Improvements
 * Use internal codes to better describe exceptions and return appropriate messages
-* Implement the message producer using KafkaFlow
+* ~~Implement the message producer using KafkaFlow~~ (Support added in this [PR](https://github.com/joaopedroneves98/vfxchallenge/pull/1))
 * Create a wrapper for the AlphaVantage client to be able to mock it in testing
 * Create Integration Tests
 * Remove the API key exposure
@@ -26,4 +26,4 @@ Use Swagger, Postman or the HTTP file provided [here](https://github.com/joaoped
 * https://github.com/fluentassertions/fluentassertions
 * https://github.com/FluentValidation/FluentValidation
 * https://github.com/devlooped/moq
-* TODO: https://github.com/Farfetch/kafkaflow
+* https://github.com/Farfetch/kafkaflow
